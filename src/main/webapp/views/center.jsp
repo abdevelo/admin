@@ -1,3 +1,136 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<%--꺾은선그래프--%>
+<script>
+  let chart01 = {
+    init: function () {
+      // Data retrieved https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature
+      Highcharts.chart('c0', {
+        chart: {
+          type: 'spline'
+        },
+        title: {
+          text: 'Monthly Average Temperature'
+        },
+        subtitle: {
+          text: 'Source: ' +
+                  '<a href="https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature" ' +
+                  'target="_blank">Wikipedia.com</a>'
+        },
+        xAxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          accessibility: {
+            description: 'Months of the year'
+          }
+        },
+        yAxis: {
+          title: {
+            text: 'Temperature'
+          },
+          labels: {
+            formatter: function () {
+              return this.value + '°';
+            }
+          }
+        },
+        tooltip: {
+          crosshairs: true,
+          shared: true
+        },
+        plotOptions: {
+          spline: {
+            marker: {
+              radius: 4,
+              lineColor: '#666666',
+              lineWidth: 1
+            }
+          }
+        },
+        // series 가 data
+
+        series: [{
+          name: 'Tokyo',
+          marker: {
+            symbol: 'square'
+          },
+          data: [5.2, 5.7, 8.7, 13.9, 18.2, 21.4, 25.0,23.0, 22.8, 17.5, 12.1, 7.6]
+
+        }, {
+          name: 'Bergen',
+          marker: {
+            symbol: 'diamond'
+          },
+          data: [1.0, 1.6, 3.3, 5.9, 10.5, 13.5, 14.5, 14.4, 11.5, 8.7, 4.7, 2.6]
+        } , {
+          name: 'Korea',
+          marker: {
+            symbol: 'diamond'
+          },
+          data: [2.0, 3.6, 4.3, 6.9, 11.5, 14.5, 15.5, 15.4, 12.5, 9.7, 5.7, 3.6]
+        }
+        ]
+      }); // end of import source
+    }
+  };
+  $(function (){
+    chart01.init();
+  })
+</script>
+<%--파이차트--%>
+<script>
+  let chart03 = {
+    init: function () {
+      this.getdata1();
+    },
+    getdata1: function () {
+      $.ajax({
+        url:'/chart0301',
+        success:function (result){
+          chart03.display1(result);
+        }
+      })
+    },
+    display1: function (result) {
+      // the start of chart code
+      // Data retrieved from https://olympics.com/en/olympic-games/beijing-2022/medals
+      Highcharts.chart('c1', {
+        chart: {
+          type: 'pie',
+          options3d: {
+            enabled: true,
+            alpha: 45
+          }
+        },
+        title: {
+          text: 'Beijing 2022 gold medals by country',
+          align: 'left'
+        },
+        subtitle: {
+          text: '3D donut in Highcharts',
+          align: 'left'
+        },
+        plotOptions: {
+          pie: {
+            innerSize: 100,
+            depth: 45
+          }
+        },
+        series: [{
+          name: 'Medals',
+          data: result
+        }]
+      }); // the end of chart code
+
+    }
+  };
+  $(function(){
+    chart03.init();
+  });
+</script>
+
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
   <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -5,7 +138,7 @@
           class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
 </div>
 
-<!-- Content Row -->
+<!-- Content Row / ICON -->
 <div class="row">
 
   <!-- Earnings (Monthly) Card Example -->
@@ -91,91 +224,34 @@
     </div>
   </div>
 </div>
+<!-- Content Row / ICON -->
 
-<!-- Content Row -->
-
+<!---------------- Content Row 1------------------>
 <div class="row">
 
-  <!-- Area Chart -->
-  <div class="col-xl-8 col-lg-7">
-    <div class="card shadow mb-4">
-      <!-- Card Header - Dropdown -->
-      <div
-              class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-        <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-        <div class="dropdown no-arrow">
-          <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-               aria-labelledby="dropdownMenuLink">
-            <div class="dropdown-header">Dropdown Header:</div>
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </div>
-      </div>
-      <!-- Card Body -->
-      <div class="card-body">
-        <div class="chart-area">
-          <canvas id="myAreaChart"></canvas>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Pie Chart -->
-  <div class="col-xl-4 col-lg-5">
-    <div class="card shadow mb-4">
-      <!-- Card Header - Dropdown -->
-      <div
-              class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-        <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-        <div class="dropdown no-arrow">
-          <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-               aria-labelledby="dropdownMenuLink">
-            <div class="dropdown-header">Dropdown Header:</div>
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </div>
-      </div>
-      <!-- Card Body -->
-      <div class="card-body">
-        <div class="chart-pie pt-4 pb-2">
-          <canvas id="myPieChart"></canvas>
-        </div>
-        <div class="mt-4 text-center small">
-                                          <span class="mr-2">
-                                              <i class="fas fa-circle text-primary"></i> Direct
-                                          </span>
-          <span class="mr-2">
-                                              <i class="fas fa-circle text-success"></i> Social
-                                          </span>
-          <span class="mr-2">
-                                              <i class="fas fa-circle text-info"></i> Referral
-                                          </span>
-        </div>
-      </div>
+
+
+  <!---------------- Content Row 2------------------>
+
+  <!-- 꺾은선 그래프 -->
+  <div class="col-sm-5 text-left">
+      <h3>CHART01</h3>
+      <div id="c0"></div>
     </div>
+
+  <!-- 파이 차트 -->
+  <div class="col-sm-5 text-left">
+    <h3>CHART03</h3>
+    <div class="" id="c1"></div>
   </div>
 </div>
 
-<!-- Content Row -->
-<div class="row">
 
+<!---------------- Content Row 3------------------>
+<div class="row">
   <!-- Content Column -->
   <div class="col-lg-6 mb-4">
-
     <!-- Project Card Example -->
     <div class="card shadow mb-4">
       <div class="card-header py-3">
@@ -214,7 +290,6 @@
         </div>
       </div>
     </div>
-
     <!-- Color System -->
     <div class="row">
       <div class="col-lg-6 mb-4">
@@ -282,7 +357,6 @@
         </div>
       </div>
     </div>
-
   </div>
 
   <div class="col-lg-6 mb-4">
