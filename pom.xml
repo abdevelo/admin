@@ -9,11 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.kbstar</groupId>
-    <artifactId>clone0425</artifactId>
+    <artifactId>admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>clone0425</name>
-    <description>clone0425</description>
+    <name>admin</name>
+    <description>admin</description>
     <properties>
         <java.version>11</java.version>
     </properties>
