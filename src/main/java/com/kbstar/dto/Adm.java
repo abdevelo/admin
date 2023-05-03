@@ -2,15 +2,14 @@ package com.kbstar.dto;
 
 import lombok.*;
 
+
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 @Getter
+@Setter
 @ToString
-
-public class CustDTO {
+public class Adm {
     private String id;
     private String pwd;
-    private String name;
-
+    private int lev;
 }

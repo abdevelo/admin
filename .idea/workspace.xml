@@ -4,12 +4,102 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0b06811-aebf-4cd0-9759-c31997918736" name="Changes" comment="0426_edit01">
+    <list default="true" id="c0b06811-aebf-4cd0-9759-c31997918736" name="Changes" comment="0427">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/CustomErrorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/AjaxImplController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/CustController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Adm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Marker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/MarkerDesc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Sales.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/frame/KBMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/AdmMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/CartMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/CustMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/ItemMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/MarkerDescMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/MarkerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/SalesMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/AdmService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/CustService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/ItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/KBService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/MarkerDescService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/MarkerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/SalesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4jdbc.log4j2.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/admmapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/cartmapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/custmapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/itemmapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/markerdescmapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/markermapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/salesmapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminfo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/base.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/cust/add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/cust/all.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/cust/detail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/error/error_page1.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/item/add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/item/all.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/loginfail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/loginok.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/registerok.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/DeleteTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/InsertTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/SelectIdTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/SelectOneTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/SelectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/UpdateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/DeleteTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/InsertTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/SelectCidTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/SelectOneTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/SelectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/UpdateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/DeleteTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/InsertTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/SelectOneTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/SelectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/UpdateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/item/DeleteTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/item/InsertTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/item/SelectOneTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/item/SelectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/item/UpdateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/DeleteTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/InsertTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/SelectLocTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/SelectOneTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/SelectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/UpdateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/markerdesc/DeleteTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/markerdesc/InsertTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/markerdesc/SelectDescTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/markerdesc/SelectOneTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/markerdesc/SelectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/markerdesc/UpdateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/sales/InsertTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/sales/SelectAllTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logback.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/logback.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/Clone0425Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/AdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/ServletInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/Clone0425ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/AdminApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/CustDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Cust.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/LombokTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/LombokTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +138,6 @@
   <component name="ProjectId" id="2OuKllFlmBdi9IZKtFF5wg2DAE7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -60,23 +149,57 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/hyosunpark/spring/admin",
+    "last_opened_file_path": "/Users/hyosunpark/spring/admin/src/main/webapp/views/cust",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "spring.configuration.checksum": "efcb79b2b798524d02f1c72f21c93cee",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "21232f297a57a5a743894a0e4a801fc3",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/views/cust" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/views" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/test/java/com/kbstar" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/views" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kbstar.controller" />
+      <recent name="com.kbstar.adm" />
+      <recent name="com.kbstar.dto" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.AdminApplication (1)">
+    <configuration name="SelectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kbstar.adm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kbstar.adm" />
+      <option name="MAIN_CLASS_NAME" value="com.kbstar.adm.SelectTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kbstar.AdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="clone0425" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kbstar.AdminApplication" />
@@ -84,6 +207,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SelectTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -104,7 +232,9 @@
       <workItem from="1682475238603" duration="1257000" />
       <workItem from="1682492482014" duration="3038000" />
       <workItem from="1682497477365" duration="4283000" />
-      <workItem from="1682554023768" duration="64000" />
+      <workItem from="1682554023768" duration="1650000" />
+      <workItem from="1682995128890" duration="12858000" />
+      <workItem from="1683072681763" duration="14820000" />
     </task>
     <task id="LOCAL-00001" summary="0426_edit01">
       <created>1682495464420</created>
@@ -120,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682495503359</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="0427">
+      <created>1682554240226</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682554240226</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,20 +268,16 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="0426_edit01" />
-    <option name="LAST_COMMIT_MESSAGE" value="0426_edit01" />
+    <MESSAGE value="0427" />
+    <option name="LAST_COMMIT_MESSAGE" value="0427" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kbstar/controller/MainController.java</url>
-          <line>17</line>
+          <line>30</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemController.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/views/livecharts.jsp</url>
@@ -173,13 +306,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/views/index.jsp</url>
-          <line>192</line>
+          <line>180</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/views/index.jsp</url>
-          <line>439</line>
+          <line>446</line>
           <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/views/register.jsp</url>
+          <line>40</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

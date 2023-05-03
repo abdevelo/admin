@@ -1,6 +1,6 @@
 package com.kbstar;
 
-import com.kbstar.dto.CustDTO;
+import com.kbstar.dto.Cust;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,7 @@ class LombokTest {
 
     @Test
     void contextLoads() {
-        CustDTO cust = new CustDTO("id01", "pwd01", "이말숙");
+        Cust cust = new Cust("id01", "pwd01", "이말숙");
         logger.info(cust.toString());
         //현업에서는 sysout 안쓴다. 굉장히 risky. log를 찍는 방식으로 test 및 에러를 찾는다.
     }
