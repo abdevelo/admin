@@ -4,25 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0b06811-aebf-4cd0-9759-c31997918736" name="Changes" comment="0503">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MarkerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/MarkerSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/item/detail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/marker/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/marker/all.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/marker/detail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/SearchTest.java" afterDir="false" />
+    <list default="true" id="c0b06811-aebf-4cd0-9759-c31997918736" name="Changes" comment="0508">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/StomWebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MsgController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/ItemSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Msg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/websocket.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/item/SearchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Marker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Marker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/MarkerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/MarkerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/service/MarkerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/MarkerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/markermapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/markermapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/cust/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/cust/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/ItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/ItemMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/itemmapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/itemmapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/item/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/item/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/item/all.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/item/all.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/marker/all.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/marker/all.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/marker/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/marker/detail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
         <option name="accountId" value="6cb84cd5-edb1-402e-97ca-fd1875cb5129" />
-        <option name="url" value="https://github.com/abdevelo/clone0425.git" />
+        <option name="url" value="https://github.com/abdevelo/admin.git" />
       </UrlAndAccount>
     </option>
   </component>
@@ -72,7 +72,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/hyosunpark/spring/admin",
+    "last_opened_file_path": "/Users/hyosunpark/spring/admin/src/main/webapp/views",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,8 +85,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/views/marker" />
       <recent name="$PROJECT_DIR$/src/main/webapp/views" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/views/marker" />
       <recent name="$PROJECT_DIR$/src/main/webapp/views/item" />
       <recent name="$PROJECT_DIR$/src/main/webapp/views/cust" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
@@ -95,6 +95,7 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/views" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kbstar.item" />
       <recent name="com.kbstar.marker" />
       <recent name="com.kbstar.dto" />
       <recent name="com.kbstar.controller" />
@@ -102,6 +103,21 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.AdminApplication (1)">
+    <configuration name="SearchTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kbstar.item.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kbstar.item" />
+      <option name="MAIN_CLASS_NAME" value="com.kbstar.item.SearchTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="admin" />
       <extension name="coverage">
@@ -164,6 +180,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SearchTest (1)" />
         <item itemvalue="JUnit.SearchTest" />
         <item itemvalue="JUnit.SearchTest.contextLoads" />
         <item itemvalue="JUnit.SelectTest" />
@@ -193,6 +210,7 @@
       <workItem from="1682995128890" duration="12858000" />
       <workItem from="1683072681763" duration="31268000" />
       <workItem from="1683179224374" duration="5419000" />
+      <workItem from="1683504823143" duration="12505000" />
     </task>
     <task id="LOCAL-00001" summary="0426_edit01">
       <created>1682495464420</created>
@@ -222,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683104166817</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="0508">
+      <created>1683504849475</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683504849475</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +260,8 @@
     <MESSAGE value="0426_edit01" />
     <MESSAGE value="0427" />
     <MESSAGE value="0503" />
-    <option name="LAST_COMMIT_MESSAGE" value="0503" />
+    <MESSAGE value="0508" />
+    <option name="LAST_COMMIT_MESSAGE" value="0508" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -272,12 +298,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/views/index.jsp</url>
-          <line>197</line>
+          <line>212</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/views/index.jsp</url>
-          <line>463</line>
+          <line>478</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -287,22 +313,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemController.java</url>
-          <line>63</line>
+          <line>64</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemController.java</url>
-          <line>54</line>
+          <line>55</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemController.java</url>
-          <line>44</line>
+          <line>45</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/views/marker/detail.jsp</url>
-          <line>55</line>
+          <line>150</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>

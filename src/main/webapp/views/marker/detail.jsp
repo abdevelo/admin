@@ -6,8 +6,102 @@
     #mimg{
         width:200px;
     }
+    #map{
+        width:400px;
+        height:400px;
+        border:2px solid red;
+    }
 </style>
+
 <script>
+    let map01 = {
+        map : null,
+        init:function (){ //초기화가되면(화면이 준비되면) 지도를 출력
+            var mapContainer = document.querySelector('#map');
+            var mapOption = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+            map = new kakao.maps.Map(mapContainer, mapOption);
+
+            // map controller
+            var mapTypeControl = new kakao.maps.MapTypeControl();
+            map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+            var zoomControl = new kakao.maps.ZoomControl();
+            map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+
+            //map marker
+            var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667);
+            var marker = new kakao.maps.Marker({
+                position: markerPosition
+            });
+            marker.setMap(map);
+
+
+            // marker + event window
+            var iwContent = '<img src="/img/a.jpg" style="width:80px"><div style="padding:5px;">Hello Pants!</div>';
+            var infowindow = new kakao.maps.InfoWindow({
+                content : iwContent
+            });
+            kakao.maps.event.addListener(marker, 'mouseover', function() {
+                infowindow.open(map, marker);
+            });
+            kakao.maps.event.addListener(marker, 'mouseout', function() {
+                infowindow.close();
+            });
+            kakao.maps.event.addListener(marker, 'click', function() {
+                location.href='http://www.nate.com';
+            });
+        }
+    };
+    $(function(){
+        map01.init();
+    });
+</script>
+
+
+<script>
+    let marker_detailmap = {
+        map : null,
+        init:function (){ //초기화가되면(화면이 준비되면) 지도를 출력
+            var mapContainer = document.querySelector('#map');
+            var mapOption = {
+                center: new kakao.maps.LatLng(${gmarker.lat}, ${gmarker.lng}), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+            map = new kakao.maps.Map(mapContainer, mapOption);
+
+            // map controller
+            var mapTypeControl = new kakao.maps.MapTypeControl();
+            map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+            var zoomControl = new kakao.maps.ZoomControl();
+            map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+
+            //map marker
+            var markerPosition  = new kakao.maps.LatLng(${gmarker.lat}, ${gmarker.lng});
+            var marker = new kakao.maps.Marker({
+                position: markerPosition
+            });
+            marker.setMap(map);
+
+            // marker + event window
+            var iwContent = '<img src="/img/${gmarker.img}" style="width:80px"><div style="padding:5px;">Hello Pants!</div>';
+            var infowindow = new kakao.maps.InfoWindow({
+                content : iwContent
+            });
+            kakao.maps.event.addListener(marker, 'mouseover', function() {
+                infowindow.open(map, marker);
+            });
+            kakao.maps.event.addListener(marker, 'mouseout', function() {
+                infowindow.close();
+            });
+            kakao.maps.event.addListener(marker, 'click', function() {
+                location.href="${gmarker.target}";
+            });
+        }
+    };
     let marker_detail = {
         init:function (){
             $('#updated_btn').click(function (){
@@ -25,6 +119,7 @@
     };
     $(function (){
         marker_detail.init();
+        marker_detailmap.init();
     });
 </script>
 <div class="container-fluid">
@@ -90,6 +185,15 @@
                         </div>
                     </div>
                 </form>
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-10" id="map">
+<%--                            지도를 뿌릴 곳, 지도의 width, height 필수로 잡아두기 --%>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

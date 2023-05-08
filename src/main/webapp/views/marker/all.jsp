@@ -38,6 +38,7 @@
                 <div class="form-group">
                     <label for="loc">Location :</label>
                     <select class="form-control" id="loc" name="loc">
+                        <%-- select 태그의 name 이 중요하고, 아래 option의 value가 중요--%>
                         <option value=""  <c:if test="${ms.loc==''}">selected</c:if> >ALL</option>
                         <option value="S" <c:if test="${ms.loc=='S'}">selected</c:if> >서울</option>
                         <option value="B" <c:if test="${ms.loc=='B'}">selected</c:if> >부산</option>

@@ -40,6 +40,13 @@
     <!-- Custom styles for this page -->
     <link href="/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+    <%--카카오맵api --%>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e8baa2c2fda88e720d607644c62ab5ae"></script>
+
+<%--    웹소켓--%>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -175,6 +182,14 @@
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Live Charts</span></a>
         </li>
+
+        <c:if test="${loginadm != null}">
+            <li class="nav-item">
+                <a class="nav-link" href="/websocket">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Websocket</span></a>
+            </li>
+        </c:if>
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
