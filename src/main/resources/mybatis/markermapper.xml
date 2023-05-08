@@ -4,9 +4,18 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--DAO 연결 완료-->
 <mapper namespace="com.kbstar.mapper.MarkerMapper">
-
 <!--작성예시. CustMapper(는,kbmapper 인터페이스에서 상속받았지) 에서 사용할 함수들의 명칭이 아래 적힌다. -->
-
+    <select id="search" parameterType="markerSearch" resultType="marker">
+        SELECT * FROM marker
+        <where>
+            <if test="loc != null and !loc.equals('')">
+                loc = UPPER(#{loc})
+            </if>
+            <if test="title != null and !title.equals('')">
+                AND title LIKE '%'||#{title}||'%'
+            </if>
+        </where>
+    </select>
     <select id="getloc" parameterType="String" resultType="marker">
 -- 여기서 id 대소문자구분 에러는 안나지만 실행은 안되는 주요한 부분 = mapper에서 선언된 것과 동일해야 함
         SELECT * FROM marker WHERE loc=UPPER(#{loc})
@@ -18,7 +27,7 @@
         SELECT * FROM marker
     </select>
     <insert id="insert" parameterType="marker">
-        INSERT INTO marker VALUES (marker_seq.NEXTVAL,#{title},#{target},#{lat},#{lng},#{img},#{loc})
+        INSERT INTO marker VALUES (marker_seq.NEXTVAL,#{title},#{target},#{lat},#{lng},#{img},UPPER(#{loc}))
     </insert>
     <!-- id제외, 6가지 칼럼 수정 가능 -->
     <update id="update" parameterType="marker">

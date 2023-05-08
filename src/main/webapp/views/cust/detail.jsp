@@ -15,7 +15,7 @@
                 method:'post'
             });
             $('#register_form').submit();
-        },
+        }
     };
 
     let cust_delete = {
