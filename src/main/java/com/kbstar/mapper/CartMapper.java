@@ -14,4 +14,8 @@ public interface CartMapper extends KBMapper<Integer, Cart> {
 
     public List<Cart> getMyCart(String cid);
     // cust_id로 고객별 장바구니를 조회하려고 함
+
+    public Integer countAll();
+
+    public Integer sumAll();
 }

@@ -1,13 +1,20 @@
 package com.kbstar.controller;
+import com.kbstar.mapper.SalesMapper;
+import com.kbstar.service.SalesService;
+import lombok.extern.slf4j.Slf4j;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.Random;
 
-
+@Slf4j
 @RestController
 public class ItemImplController {
+    @Autowired
+    SalesService salesService;
 
     @RequestMapping("/chart0301")
     public Object chart0301() {
@@ -61,6 +68,22 @@ public class ItemImplController {
             for ( int i=0; i< countries.length; i++){
                 jo.put(countryName[i], countries[i]);
             }
+        return jo;
+    }
+
+    @RequestMapping("/chartgender")
+    public Object chartgender(Model model) throws Exception {
+        JSONObject jo = new JSONObject();
+        JSONArray jaM = new JSONArray();
+        JSONArray jaF = new JSONArray();
+        jaM.add(salesService.monthlySalesByGender("M"));
+        jaF.add(salesService.monthlySalesByGender("F"));
+        String[] month = {"20/01", "20/02", "20/03", "20/04", "20/05", "20/06","20/07","20/08"};
+        jo.put("month",month);
+        jo.put("male", jaM);
+        jo.put("female",jaF);
+        System.out.println(jaM);
+        System.out.println(jo);
         return jo;
     }
 //    public Object chart0303() {

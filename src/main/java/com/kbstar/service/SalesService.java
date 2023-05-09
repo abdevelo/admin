@@ -5,7 +5,6 @@ import com.kbstar.mapper.SalesMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -13,7 +12,6 @@ import java.util.List;
 public class SalesService implements KBService<String, Sales> {
     @Autowired
     SalesMapper mapper;
-
 
     @Override
     public void register(Sales sales) throws Exception {
@@ -39,4 +37,8 @@ public class SalesService implements KBService<String, Sales> {
     public List<Sales> get() throws Exception {
         return mapper.selectall();
     }
-}
+
+    public List<Integer> monthlySalesByGender(String gender) throws Exception {
+        return mapper.monthlySalesByGender(gender);
+    }
+ }

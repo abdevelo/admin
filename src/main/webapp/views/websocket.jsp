@@ -49,14 +49,14 @@
         },
         connect:function(){
             var sid = this.id;
-            var socket = new SockJS('http://127.0.0.1:8088/ws'); // 웹소켓 접속 정보
+            var socket = new SockJS('${adminserver}/ws'); // 웹소켓 접속 정보
             this.stompClient = Stomp.over(socket);
 
             this.stompClient.connect({}, function(frame) {
                 websocket.setConnected(true);
                 console.log('Connected: ' + frame);
                 this.subscribe('/send', function(msg) {
-                    $("#all").prepend(
+                    $("#all").prepend(  //prepend는 append 되어 붙여지는 것 like 채팅 내용이 쌓이는 것
                         "<h4>" + JSON.parse(msg.body).sendid +":"+
                         JSON.parse(msg.body).content1
                         + "</h4>");

@@ -4,7 +4,10 @@ import com.kbstar.dto.Adm;
 import com.kbstar.dto.Cust;
 import com.kbstar.dto.Item;
 import com.kbstar.service.AdmService;
+import com.kbstar.service.SalesService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +18,7 @@ import org.json.simple.JSONObject;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
+@Slf4j
 @Controller
 public class MainController {
     @Autowired
@@ -23,8 +27,15 @@ public class MainController {
     @Autowired
     AdmService admService;
 
+    @Value("${adminserver}")
+    String adminserver;
+
+    @Autowired
+    SalesService salesService;
+
     @RequestMapping("/")
-    public String main(){
+    public String main(Model model) throws Exception {
+        model.addAttribute("adminserver", adminserver);
         return "index";
     }
 
@@ -36,6 +47,7 @@ public class MainController {
 
     @RequestMapping("/livecharts")
     public String livecharts(Model model){
+        model.addAttribute("adminserver", adminserver);
         model.addAttribute("center", "livecharts");
         return "index";
     }
@@ -114,8 +126,12 @@ public class MainController {
 
     @RequestMapping("/websocket")
     public String websocket(Model model ){
+        model.addAttribute("adminserver", adminserver);
         model.addAttribute("center", "websocket");
         return "index";
     }
+
+
+
 
 }

@@ -2,11 +2,120 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
+<%--웹소켓--%>
+<script>
+  let websocket_center = {
+    stompClient: null, // ws와의 커넥션 정보
+    init: function () {
+      this.connect();
+    },
+    connect: function () {
+      var sid = this.id;
+      var socket = new SockJS('${adminserver}/wss'); //ws가 아닌 wss
+      var tasksWidth =
+      this.stompClient = Stomp.over(socket);
+      this.stompClient.connect({}, function (frame) {
+        console.log('Connected: ' + frame);
+        this.subscribe('/sendadm', function (msg) {
+          //msg로 들어온 데이터는 Msgadm 객체로 content1, 2, 3, 4 를 가지고 있음
+          $('#content1_msg').text(JSON.parse(msg.body).content1);
+          $('#content2_msg').text(JSON.parse(msg.body).content2);
+          $('#content3_msg').text(JSON.parse(msg.body).content3);
+          $('#content4_msg').text(JSON.parse(msg.body).content4);
+          $('#progress1').css('width', JSON.parse(msg.body).content1 + "%");
+          $('#progress1').attr('aria-valuenow',JSON.parse(msg.body).content1);
+          $('#progress2').css('width', JSON.parse(msg.body).content2/10 + "%");
+          $('#progress2').attr('aria-valuenow',JSON.parse(msg.body).content2/10);
+          $('#progress3').css('width', JSON.parse(msg.body).content3/500 * 100 + "%");
+          $('#progress3').attr('aria-valuenow',JSON.parse(msg.body).content3/500 * 100);
+          $('#progress4').css('width', JSON.parse(msg.body).content4/150 * 100 + "%");
+          $('#progress4').attr('aria-valuenow',JSON.parse(msg.body).content4/150 * 100);
+        });
+      })
+    }
+  };
+
+
+  $(function (){
+    websocket_center.init();
+  });
+</script>
+
+<%--월별남녀비중매출액 그래프--%>
+<script>
+  let chart_gender = {
+    init:function(){
+      this.getData();
+    },
+    getData:function () {
+      $.ajax({
+        url:'/chartgender',
+        success:function(result){
+          chart_gender.display(result);
+          alert(result.month);
+        }
+      })
+    },
+    display:function(result){
+      Highcharts.chart('c2', {
+        chart: {
+          type: 'column'
+        },
+        title: {
+          text: 'Sales Percentage By Gender'
+        },
+        xAxis: {
+          categories:
+        },
+        yAxis: {
+          min: 0,
+          title: {
+            text: 'Assists'
+          }
+
+        },
+        tooltip: {
+          pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+          shared: true
+        },
+        series: [{
+          name: 'Male',
+          data: result.male
+        }, {
+          name: 'Female',
+          data: result.female
+        }]
+
+
+      });
+    }
+  }
+  $(function (){
+    chart_gender.init();
+  })
+
+
+</script>
+
 <%--꺾은선그래프--%>
 <script>
   let chart01 = {
-    init: function () {
-      // Data retrieved https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature
+    init: function() {
+      this.getData();
+    },
+    getData:function(){
+      $.ajax({
+        url:'/chartgender',
+        success:function(result){
+          chart01.display(result);
+          alert(result);
+          console.log(typeof result.male[0]);
+          console.log(result.male);
+          console.log(result);
+        }
+      })
+    },
+    display:function (result){
       Highcharts.chart('c0', {
         chart: {
           type: 'spline'
@@ -14,14 +123,8 @@
         title: {
           text: 'Monthly Average Temperature'
         },
-        subtitle: {
-          text: 'Source: ' +
-                  '<a href="https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature" ' +
-                  'target="_blank">Wikipedia.com</a>'
-        },
         xAxis: {
-          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          categories: result.month,
           accessibility: {
             description: 'Months of the year'
           }
@@ -36,40 +139,19 @@
             }
           }
         },
-        tooltip: {
-          crosshairs: true,
-          shared: true
-        },
-        plotOptions: {
-          spline: {
-            marker: {
-              radius: 4,
-              lineColor: '#666666',
-              lineWidth: 1
-            }
-          }
-        },
         // series 가 data
-
         series: [{
           name: 'Tokyo',
           marker: {
             symbol: 'square'
           },
-          data: [5.2, 5.7, 8.7, 13.9, 18.2, 21.4, 25.0,23.0, 22.8, 17.5, 12.1, 7.6]
-
+          data: result.male[0]
         }, {
           name: 'Bergen',
           marker: {
             symbol: 'diamond'
           },
-          data: [1.0, 1.6, 3.3, 5.9, 10.5, 13.5, 14.5, 14.4, 11.5, 8.7, 4.7, 2.6]
-        } , {
-          name: 'Korea',
-          marker: {
-            symbol: 'diamond'
-          },
-          data: [2.0, 3.6, 4.3, 6.9, 11.5, 14.5, 15.5, 15.4, 12.5, 9.7, 5.7, 3.6]
+          data:result.female[0]
         }
         ]
       }); // end of import source
@@ -135,7 +217,7 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
   <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
   <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-          class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+          class="fas fa-download fa-sm text-white-50"></i> DOWNLOAD </a>
 </div>
 
 <!-- Content Row / ICON -->
@@ -147,12 +229,23 @@
       <div class="card-body">
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
-            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-              Earnings (Monthly)</div>
-            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">EARNINGS(MONTHLY)
+            </div>
+            <div class="row no-gutters align-items-center">
+              <div class="col-auto">
+                <div id="content1_msg" class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Loading..</div>
+              </div>
+              <div class="col">
+                <div class="progress progress-sm mr-2">
+                  <div id="progress1" class="progress-bar bg-primary" role="progressbar"
+                       style="width: 50%" aria-valuenow="0" aria-valuemin="0"
+                       aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-auto">
-            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
           </div>
         </div>
       </div>
@@ -165,12 +258,23 @@
       <div class="card-body">
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
-            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-              Earnings (Annual)</div>
-            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">EARNINGS(ANNUAL)
+            </div>
+            <div class="row no-gutters align-items-center">
+              <div class="col-auto">
+                <div id="content2_msg" class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Loading..</div>
+              </div>
+              <div class="col">
+                <div class="progress progress-sm mr-2">
+                  <div id="progress2" class="progress-bar bg-success" role="progressbar"
+                       style="width: 50%" aria-valuenow="0" aria-valuemin="0"
+                       aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-auto">
-            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+            <i class="fas fa-baby-carriage fa-2x text-gray-300"></i>
           </div>
         </div>
       </div>
@@ -179,7 +283,7 @@
 
   <!-- Earnings (Monthly) Card Example -->
   <div class="col-xl-3 col-md-6 mb-4">
-    <div class="card border-left-info shadow h-100 py-2">
+    <div class="card border-left-danger shadow h-100 py-2">
       <div class="card-body">
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
@@ -187,19 +291,19 @@
             </div>
             <div class="row no-gutters align-items-center">
               <div class="col-auto">
-                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                <div id="content3_msg" class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Loading..</div>
               </div>
               <div class="col">
                 <div class="progress progress-sm mr-2">
-                  <div class="progress-bar bg-info" role="progressbar"
-                       style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                  <div id="progress3" class="progress-bar bg-danger" role="progressbar"
+                       style="width: 50%" aria-valuenow="0" aria-valuemin="0"
                        aria-valuemax="100"></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-auto">
-            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+            <i class="fas fa-chalkboard-teacher fa-2x text-gray-300"></i>
           </div>
         </div>
       </div>
@@ -212,17 +316,29 @@
       <div class="card-body">
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
-            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-              Pending Requests</div>
-            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">PENDING REQUESTS
+            </div>
+            <div class="row no-gutters align-items-center">
+              <div class="col-auto">
+                <div id="content4_msg" class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Loading..</div>
+              </div>
+              <div class="col">
+                <div class="progress progress-sm mr-2">
+                  <div id="progress4" class="progress-bar bg-warning" role="progressbar"
+                       style="width: 50%" aria-valuenow="0" aria-valuemin="0"
+                       aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-auto">
-            <i class="fas fa-comments fa-2x text-gray-300"></i>
+            <i class="fas fa-arrow-circle-up fa-2x text-gray-300"></i>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </div>
 <!-- Content Row / ICON -->
 
@@ -233,6 +349,12 @@
 
 
   <!---------------- Content Row 2------------------>
+
+
+<%--  월별 남녀 매출 비중 그래프 뿌릴 곳 --%>
+  <figure class="highcharts-figure">
+    <div id="c2"></div>
+  </figure>
 
   <!-- 꺾은선 그래프 -->
   <div class="col-sm-5 text-left">

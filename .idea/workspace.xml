@@ -5,24 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0b06811-aebf-4cd0-9759-c31997918736" name="Changes" comment="0508">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/StomWebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MsgController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/ItemSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Msg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/websocket.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/item/SearchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/ScheduleConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ScheduleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/MsgAdm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/center-admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/sales/monthlySalesByGenderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/AdminApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/StomWebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/StomWebSocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemImplController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemImplController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/ItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/ItemMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/ItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/itemmapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/itemmapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/item/all.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/item/all.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/marker/all.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/marker/all.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/marker/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/marker/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Sales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Sales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/CartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/CartMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/SalesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/SalesMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/service/SalesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/SalesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/cartmapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/cartmapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/salesmapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/salesmapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/demo/chart-area-demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/demo/chart-area-demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/center.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/center.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/item/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/item/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/livecharts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/livecharts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/websocket.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/websocket.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +43,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -78,6 +86,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "spring.configuration.checksum": "21232f297a57a5a743894a0e4a801fc3",
     "vue.rearranger.settings.migration": "true"
@@ -95,11 +106,11 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/views" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kbstar.sales" />
       <recent name="com.kbstar.item" />
       <recent name="com.kbstar.marker" />
       <recent name="com.kbstar.dto" />
       <recent name="com.kbstar.controller" />
-      <recent name="com.kbstar.adm" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.AdminApplication (1)">
@@ -164,6 +175,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="monthlySalesByGenderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kbstar.sales.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kbstar.sales" />
+      <option name="MAIN_CLASS_NAME" value="com.kbstar.sales.monthlySalesByGenderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AdminApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kbstar.AdminApplication" />
@@ -180,6 +206,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.monthlySalesByGenderTest" />
         <item itemvalue="JUnit.SearchTest (1)" />
         <item itemvalue="JUnit.SearchTest" />
         <item itemvalue="JUnit.SearchTest.contextLoads" />
@@ -210,7 +237,8 @@
       <workItem from="1682995128890" duration="12858000" />
       <workItem from="1683072681763" duration="31268000" />
       <workItem from="1683179224374" duration="5419000" />
-      <workItem from="1683504823143" duration="12505000" />
+      <workItem from="1683504823143" duration="15376000" />
+      <workItem from="1683589918996" duration="27657000" />
     </task>
     <task id="LOCAL-00001" summary="0426_edit01">
       <created>1682495464420</created>
@@ -247,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683504849475</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="0508">
+      <created>1683535094112</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683535094112</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +303,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kbstar/controller/MainController.java</url>
-          <line>30</line>
+          <line>41</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -283,18 +318,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/views/center.jsp</url>
-          <line>141</line>
+          <line>223</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/views/center.jsp</url>
-          <line>144</line>
+          <line>226</line>
           <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/webapp/views/center.jsp</url>
-          <line>209</line>
-          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/views/index.jsp</url>
@@ -330,6 +360,21 @@
           <url>file://$PROJECT_DIR$/src/main/webapp/views/marker/detail.jsp</url>
           <line>150</line>
           <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/views/center.jsp</url>
+          <line>164</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/views/center.jsp</url>
+          <line>295</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/views/center.jsp</url>
+          <line>227</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

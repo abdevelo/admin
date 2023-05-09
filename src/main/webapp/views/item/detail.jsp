@@ -2,6 +2,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
+<style>
+    #itemimg{
+        width:250px;
+    }
+</style>
 <script>
     let item_detail = {
         init:function (){
@@ -79,7 +84,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-10">
-                            <img src="/img/${gitem.imgname}">
+                            <img id="itemimg" src="/img/${gitem.imgname}">
                         </div>
                     </div>
                     <div class="form-group">
