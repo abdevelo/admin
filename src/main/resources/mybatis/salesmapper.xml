@@ -6,7 +6,7 @@
 
 <!--sales는 정보성 데이터로 조회와 추가만 하면 됨-->
     <select id="monthlySalesByGender" parameterType="String" resultType="Integer">
-        SELECT SUM(price) AS sum
+        SELECT SUM(price) AS sum, rdate
         FROM sales
         WHERE gender = #{gender}
         GROUP BY rdate

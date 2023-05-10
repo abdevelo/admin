@@ -20,7 +20,7 @@ public class ScheduleController {
 
     @Autowired
     private SimpMessageSendingOperations messagingTemplate;
-    @Scheduled(cron = "* * * * * 1")
+    @Scheduled(cron = "*/3 * * * * *")
     public void cronJobDailyUpdate() {
         Random r = new Random();
         int content1 = r.nextInt(100)+1;

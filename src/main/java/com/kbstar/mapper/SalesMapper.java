@@ -11,4 +11,6 @@ import java.util.List;
 @Mapper
 public interface SalesMapper extends KBMapper<String, Sales> {
     public List<Integer> monthlySalesByGender(String gender);
+
+
 }

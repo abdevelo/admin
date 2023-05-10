@@ -41,4 +41,5 @@ public class SalesService implements KBService<String, Sales> {
     public List<Integer> monthlySalesByGender(String gender) throws Exception {
         return mapper.monthlySalesByGender(gender);
     }
+
  }

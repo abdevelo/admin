@@ -82,8 +82,6 @@ public class ItemImplController {
         jo.put("month",month);
         jo.put("male", jaM);
         jo.put("female",jaF);
-        System.out.println(jaM);
-        System.out.println(jo);
         return jo;
     }
 //    public Object chart0303() {
