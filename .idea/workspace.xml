@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0b06811-aebf-4cd0-9759-c31997918736" name="Changes" comment="0509">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Chart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/ChartMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/ChartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/chartmapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/chart/monthlyTest.java" afterDir="false" />
+    <list default="true" id="c0b06811-aebf-4cd0-9759-c31997918736" name="Changes" comment="0510">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/AjaxImplController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/AjaxImplController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemImplController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemImplController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ScheduleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/SalesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/SalesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/service/SalesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/SalesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/salesmapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/salesmapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/center.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/center.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +57,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/hyosunpark/spring/admin/src/main/resources/mybatis",
+    "last_opened_file_path": "/Users/hyosunpark/spring/admin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -227,7 +216,8 @@
       <workItem from="1683179224374" duration="5419000" />
       <workItem from="1683504823143" duration="15376000" />
       <workItem from="1683589918996" duration="33625000" />
-      <workItem from="1683679302224" duration="6859000" />
+      <workItem from="1683679302224" duration="6875000" />
+      <workItem from="1683870938290" duration="644000" />
     </task>
     <task id="LOCAL-00001" summary="0426_edit01">
       <created>1682495464420</created>
@@ -278,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683624820031</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="0510">
+      <created>1683693383055</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683693383055</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +301,8 @@
     <MESSAGE value="0503" />
     <MESSAGE value="0508" />
     <MESSAGE value="0509" />
-    <option name="LAST_COMMIT_MESSAGE" value="0509" />
+    <MESSAGE value="0510" />
+    <option name="LAST_COMMIT_MESSAGE" value="0510" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
