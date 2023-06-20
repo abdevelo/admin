@@ -19,11 +19,15 @@ public class StomWebSocketConfig implements WebSocketMessageBrokerConfigurer{
 
         // STOMP 메시지를 처리하는 데 사용할 웹소켓 엔드포인트를 등록
         // '/ws', '/wss', '/chbot'경로를 등록하고 접근을 허용한 "http://127.0.0.1" 줏로 소캣울 샹송
-        registry.addEndpoint("/ws").setAllowedOrigins("http://127.0.0.1",serviceserver).withSockJS();
+        //  ****** 아래는 서비스 서버 접속 사용자의 접근을 허용하는 구문 ********
+        registry.addEndpoint("/ws").setAllowedOrigins("http://127.0.0.1",serviceserver,"http://172.16.20.102","http://172.16.21.49:8083","http://172.16.21.139").withSockJS();
         // setAllowedOrigins : 현재 admin은 127.0.0.1:8088 이지만 127.0.0.1로 접속한 것도 여기로(/ws) 접속되도록 허가해주겠다.
-
+        // "/ws" 1:1 대화
         registry.addEndpoint("/wss").setAllowedOrigins("http://127.0.0.1").withSockJS();
-        registry.addEndpoint("/chbot").setAllowedOrigins("http://127.0.0.1").withSockJS();
+        // "/wss" 대쉬보드의 차트 데이터 받기 , sheduler 이용
+        // 관리자 페이지에서만 활용될 정보이므로 서비스서버가 포함되지 않음
+        registry.addEndpoint("/chbot").setAllowedOrigins("http://127.0.0.1",serviceserver).withSockJS();
+
     }
 
     /* 어플리케이션 내부에서 사용할 path를 지정할 수 있음 */
@@ -34,6 +38,6 @@ public class StomWebSocketConfig implements WebSocketMessageBrokerConfigurer{
         // 큐 = 메일함( 메세지가 배달 되는 ), 강사님은 통로라고 칭하심 
         // 클라이언트는 어떤 큐를 구독할지 명확히 해야 함
         // 메세지 브로커는 구독한 클라이언트에게 어떤 메세지가 전달될 지 정확히 해야 함
-        registry.enableSimpleBroker("/send","/sendadm");
+        registry.enableSimpleBroker("/send","/sendadm","/chsend");
     }
 }

@@ -44,6 +44,7 @@
 
                     <hr>
                     <form id="login_form" class="form-horizontal well col-sm-8">
+                        <input type="hidden" name="redirectURL" value="${redirectURL}">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                             <input id="id" type="text" class="form-control" name="id" placeholder="id">

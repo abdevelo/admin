@@ -21,5 +21,4 @@ public class ScheduleConfig implements SchedulingConfigurer
 
         registry.setTaskScheduler(threadPoolTaskScheduler);
     }
-
 }

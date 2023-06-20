@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="admin:war" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0b06811-aebf-4cd0-9759-c31997918736" name="Changes" comment="0510">
+    <list default="true" id="c0b06811-aebf-4cd0-9759-c31997918736" name="Changes" comment="0512">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/LoginCheckInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ChatbotController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/util/ChatBotUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fcm_admin.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/callcenter.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/ncp/ChatbotTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/ScheduleConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/ScheduleConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/StomWebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/StomWebSocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/item/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/item/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/InsertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/InsertTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/InsertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/InsertTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,96 +80,98 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/hyosunpark/spring/admin",
+    "last_opened_file_path": "/Users/hyosunpark/spring/admin/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "File.Encoding",
     "spring.configuration.checksum": "21232f297a57a5a743894a0e4a801fc3",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/mybatis" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/views" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/views/marker" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp/views/item" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/views/cust" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/views" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mybatis" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/views/marker" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/views" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.kbstar" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kbstar" />
+      <recent name="com.kbstar.ncp" />
+      <recent name="com.kbstar.controller" />
       <recent name="com.kbstar.chart" />
       <recent name="com.kbstar.mapper" />
-      <recent name="com.kbstar.dto" />
-      <recent name="com.kbstar.sales" />
-      <recent name="com.kbstar.item" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AdminApplication (1)">
-    <configuration name="SearchTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FcmTests">
+    <configuration name="ChatbotTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="admin" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kbstar.item.*" />
+          <option name="PATTERN" value="com.kbstar.ncp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.kbstar.item" />
-      <option name="MAIN_CLASS_NAME" value="com.kbstar.item.SearchTest" />
+      <option name="PACKAGE_NAME" value="com.kbstar.ncp" />
+      <option name="MAIN_CLASS_NAME" value="com.kbstar.ncp.ChatbotTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FcmTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="admin" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kbstar.marker.*" />
+          <option name="PATTERN" value="com.kbstar.fcm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.kbstar.marker" />
-      <option name="MAIN_CLASS_NAME" value="com.kbstar.marker.SearchTest" />
+      <option name="PACKAGE_NAME" value="com.kbstar.fcm" />
+      <option name="MAIN_CLASS_NAME" value="com.kbstar.fcm.FcmTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InsertTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="admin" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kbstar.marker.*" />
+          <option name="PATTERN" value="com.kbstar.cust.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.kbstar.marker" />
-      <option name="MAIN_CLASS_NAME" value="com.kbstar.marker.SearchTest" />
-      <option name="METHOD_NAME" value="contextLoads" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.kbstar.cust" />
+      <option name="MAIN_CLASS_NAME" value="com.kbstar.cust.InsertTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="monthlySalesByGenderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InsertTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="admin" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kbstar.sales.*" />
+          <option name="PATTERN" value="com.kbstar.adm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.kbstar.sales" />
-      <option name="MAIN_CLASS_NAME" value="com.kbstar.sales.monthlySalesByGenderTest" />
+      <option name="PACKAGE_NAME" value="com.kbstar.adm" />
+      <option name="MAIN_CLASS_NAME" value="com.kbstar.adm.InsertTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -183,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FcmTests" />
+        <item itemvalue="JUnit.ChatbotTest" />
+        <item itemvalue="JUnit.InsertTest (1)" />
+        <item itemvalue="JUnit.InsertTest" />
         <item itemvalue="JUnit.monthlyTest" />
-        <item itemvalue="JUnit.monthlySalesByGenderTest" />
-        <item itemvalue="JUnit.SearchTest (1)" />
-        <item itemvalue="JUnit.SearchTest" />
-        <item itemvalue="JUnit.SearchTest.contextLoads" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +242,18 @@
       <workItem from="1683504823143" duration="15376000" />
       <workItem from="1683589918996" duration="33625000" />
       <workItem from="1683679302224" duration="6875000" />
-      <workItem from="1683870938290" duration="644000" />
+      <workItem from="1683870938290" duration="718000" />
+      <workItem from="1684034815612" duration="17552000" />
+      <workItem from="1684220676454" duration="3644000" />
+      <workItem from="1684245680200" duration="1918000" />
+      <workItem from="1684283851875" duration="3703000" />
+      <workItem from="1684457568449" duration="1612000" />
+      <workItem from="1684728286399" duration="1984000" />
+      <workItem from="1684889833596" duration="4210000" />
+      <workItem from="1685087776257" duration="10221000" />
+      <workItem from="1685579398378" duration="2946000" />
+      <workItem from="1686892423993" duration="1005000" />
+      <workItem from="1687224841734" duration="2254000" />
     </task>
     <task id="LOCAL-00001" summary="0426_edit01">
       <created>1682495464420</created>
@@ -275,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683693383055</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="0512">
+      <created>1683871652087</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683871652087</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +345,8 @@
     <MESSAGE value="0508" />
     <MESSAGE value="0509" />
     <MESSAGE value="0510" />
-    <option name="LAST_COMMIT_MESSAGE" value="0510" />
+    <MESSAGE value="0512" />
+    <option name="LAST_COMMIT_MESSAGE" value="0512" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -334,12 +378,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/views/index.jsp</url>
-          <line>212</line>
+          <line>218</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/views/index.jsp</url>
-          <line>478</line>
+          <line>484</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -386,6 +430,16 @@
           <url>file://$PROJECT_DIR$/src/test/java/com/kbstar/chart/monthlyTest.java</url>
           <line>15</line>
           <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/kbstar/ncp/ChatbotTest.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/views/item/all.jsp</url>
+          <line>27</line>
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

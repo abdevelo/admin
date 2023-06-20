@@ -14,7 +14,7 @@ public class InsertTest {
     CustService service;
     @Test
     void contextLoads(){
-        Cust obj = new Cust("id21", "pwd21", "summer");
+        Cust obj = new Cust("id2", "pwd21", "summer");
         try {
             service.register(obj);
             log.info("등록 정상");

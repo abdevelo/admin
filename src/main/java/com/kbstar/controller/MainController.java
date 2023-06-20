@@ -53,13 +53,14 @@ public class MainController {
     }
 
     @RequestMapping("/login")
-    public String login(Model model){
+    public String login(Model model,String redirectURL){
         model.addAttribute("center", "login");
+        model.addAttribute("redirectURL", redirectURL);
         return "index";
     }
 
     @RequestMapping("/loginimpl")
-    public String loginimpl(Model model, String id, String pwd, HttpSession session){
+    public String loginimpl(Model model, String id, String pwd, HttpSession session, String redirectURL){
         Adm adm = null;
         String nextPage = "loginfail";
         try {
@@ -68,6 +69,11 @@ public class MainController {
                 nextPage = "loginok";
                 session.setMaxInactiveInterval(100000);// 한 session의 제한시간
                 session.setAttribute("loginadm",adm); //session에 logincust라는 이름으로 cust를 넣어줌 --> login을 메모리에 제한시간만큼 유지
+                if(redirectURL == null || redirectURL.equals("")){
+                    return "redirect:/";
+                }else{
+                    return "redirect:"+redirectURL;
+                }
             }
         } catch (Exception e) {
             throw new RuntimeException("시스템 장애 잠시 후 다시 로그인 하세요.");
@@ -131,6 +137,12 @@ public class MainController {
         return "index";
     }
 
+    @RequestMapping("/callcenter")
+    public String callcenter(Model model){
+        model.addAttribute("adminserver", adminserver);
+        model.addAttribute("center", "callcenter");
+        return "index";
+    }
 
 
 
